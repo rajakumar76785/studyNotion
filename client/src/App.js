@@ -15,8 +15,6 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Dashboard from "./pages/Dashboard";
 import Error from "./pages/Error";
-import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import Cart from "./components/core/Dashboard/Cart/index";
 import { ACCOUNT_TYPE } from "./utils/constants";
 import EnrolledCourses from "./components/core/Dashboard/EnrolledCourses";

@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom"
 
 import { updateProfile } from "../../../../services/operations/SettingsAPI"
 import IconBtn from "../../../common/IconBtn"
-import { useEffect } from "react"
-import { setUser } from "../../../../slices/profileSlice"
+//import { useEffect } from "react"
+//import { setUser } from "../../../../slices/profileSlice"
 
 const genders = ["Male", "Female", "Non-Binary", "Prefer not to say", "Other"]
 
