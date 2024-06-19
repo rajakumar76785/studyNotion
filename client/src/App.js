@@ -32,8 +32,8 @@ import VideoDetails from "./components/core/ViewCourse/VideoDetails";
 
 function App() {
 
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
+  //const dispatch = useDispatch();
+  //const navigate = useNavigate();
   
   const { user } = useSelector((state) => state.profile)
   
