@@ -31,11 +31,11 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/rajakumar76785/studyNotion"
   },
   "author": "Raja Kumar",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/rajakumar76785/studyNotion"
   },
   "scripts": {
     "start": "react-scripts start",
