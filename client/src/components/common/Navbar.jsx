@@ -27,6 +27,7 @@ function Navbar() {
       setLoading(true)
       try {
         const res = await apiConnector("GET", categories.CATEGORIES_API)
+        console.log("raja check here ",res.data);
         setSubLinks(res.data.data)
       } catch (error) {
         console.log("Could not fetch Categories.", error)
@@ -75,6 +76,9 @@ function Navbar() {
                         ) : (subLinks && subLinks.length) ? (
                           <>
                             {subLinks
+                              ?.filter(
+                                (subLink) => subLink?.courses?.length > 0
+                              )
                               ?.map((subLink, i) => (
                                 <Link
                                   to={`/catalog/${subLink.name
