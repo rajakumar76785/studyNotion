@@ -2,6 +2,7 @@ const User = require("../models/User");
 const mailSender = require("../utils/mailSender");
 const bcrypt = require("bcrypt");
 const crypto = require("crypto");
+const {ResetPasswordLink} = require("../mail/templates/ResetPasswordLink");
 
 exports.resetPasswordToken = async (req, res) => {
 	try {
@@ -25,12 +26,12 @@ exports.resetPasswordToken = async (req, res) => {
 		);
 		console.log("DETAILS", updatedDetails);
 
-		const url = `https://localhost:4000/update-password/${token}`;
+		const url = `https://study-notion-frontend-virid.vercel.app/update-password/${token}`;
 
 		await mailSender(
 			email,
 			"Password Reset",
-			`Your Link for email verification is ${url} .Please click this url to reset your password.`
+			ResetPasswordLink(token)
 		);
 
 		res.json({
